@@ -71,3 +71,62 @@ Caused by:
 
 Import trace for requested module:
 ./app/layout.tsx
+ ⨯ ./app/layout.tsx
+Error:   [31mx[0m Unterminated string constant
+   ,-[[36;1;4m/home/code/existing-site/app/layout.tsx[0m:1:1]
+ [2m1[0m | import type { Metadata } from \"next\";
+   : [35;1m                               ^^^^^^^^[0m
+ [2m2[0m | import { Inter } from \"next/font/google\";\nimport \"./globals.css\";
+ [2m3[0m | 
+ [2m4[0m | const inter = Inter({ subsets: [\"latin\"] });
+   `----
+  [31mx[0m Expected unicode escape
+   ,-[[36;1;4m/home/code/existing-site/app/layout.tsx[0m:1:1]
+ [2m1[0m | import type { Metadata } from \"next\";
+   : [35;1m                              ^[0m
+ [2m2[0m | import { Inter } from \"next/font/google\";\nimport \"./globals.css\";
+ [2m3[0m | 
+ [2m4[0m | const inter = Inter({ subsets: [\"latin\"] });
+   `----
+  [31mx[0m Unexpected token `<lexing error: Error { error: (31..31, ExpectedUnicodeEscape) }>`. Expected a string literal
+   ,-[[36;1;4m/home/code/existing-site/app/layout.tsx[0m:1:1]
+ [2m1[0m | import type { Metadata } from \"next\";
+   : [35;1m                              ^[0m
+ [2m2[0m | import { Inter } from \"next/font/google\";\nimport \"./globals.css\";
+ [2m3[0m | 
+ [2m4[0m | const inter = Inter({ subsets: [\"latin\"] });
+   `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/layout.tsx
+ ⨯ ./app/layout.tsx
+Error:   [31mx[0m Unterminated string constant
+   ,-[[36;1;4m/home/code/existing-site/app/layout.tsx[0m:1:1]
+ [2m1[0m | import type { Metadata } from \"next\";
+   : [35;1m                               ^^^^^^^^[0m
+ [2m2[0m | import { Inter } from \"next/font/google\";
+ [2m3[0m | import \"./globals.css\";
+   `----
+  [31mx[0m Expected unicode escape
+   ,-[[36;1;4m/home/code/existing-site/app/layout.tsx[0m:1:1]
+ [2m1[0m | import type { Metadata } from \"next\";
+   : [35;1m                              ^[0m
+ [2m2[0m | import { Inter } from \"next/font/google\";
+ [2m3[0m | import \"./globals.css\";
+   `----
+  [31mx[0m Unexpected token `<lexing error: Error { error: (31..31, ExpectedUnicodeEscape) }>`. Expected a string literal
+   ,-[[36;1;4m/home/code/existing-site/app/layout.tsx[0m:1:1]
+ [2m1[0m | import type { Metadata } from \"next\";
+   : [35;1m                              ^[0m
+ [2m2[0m | import { Inter } from \"next/font/google\";
+ [2m3[0m | import \"./globals.css\";
+   `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/layout.tsx

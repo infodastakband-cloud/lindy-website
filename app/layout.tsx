@@ -1,5 +1,6 @@
 import type { Metadata } from \"next\";
-import { Inter } from \"next/font/google\";\nimport \"./globals.css\";
+import { Inter } from \"next/font/google\";
+import \"./globals.css\";
 
 const inter = Inter({ subsets: [\"latin\"] });
 
@@ -26,20 +27,11 @@ export const metadata: Metadata = {
     siteName: \"Dastak Band\",
     title: \"Dastak Band | Official Booking & EPK\",
     description: \"High-energy Hindi Indie Rock & Pop led by Akarsh Sahay. Book now for college fests, corporate shows, and private events.\",
-    images: [
-      {
-        url: \"/images/og-image.png\",
-        width: 1200,
-        height: 630,
-        alt: \"Dastak Band Live Performance\",
-      },
-    ],
   },
   twitter: {
     card: \"summary_large_image\",
     title: \"Dastak Band | Official Booking & EPK\",
     description: \"High-energy Hindi Indie Rock & Pop led by Akarsh Sahay. Book now for college fests, corporate shows, and private events.\",
-    images: [\"/images/og-image.png\"],
   },
   robots: {
     index: true,
@@ -58,7 +50,8 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {\n  const jsonLd = {
+}>) {
+  const jsonLd = {
     \"@context\": \"https://schema.org\",
     \"@type\": \"MusicGroup\",
     \"name\": \"Dastak Band\",
