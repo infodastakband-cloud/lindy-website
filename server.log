@@ -1,57 +1,21 @@
-$ next dev --turbopack
-   ▲ Next.js 15.5.6 (Turbopack)
-   - Local:        http://localhost:3000
-   - Network:      http://169.254.0.21:3000
+
+> dastak-band-booking@0.1.0 dev
+> next dev -p 3002
+
+   ▲ Next.js 15.5.9
+   - Local:        http://localhost:3002
+   - Network:      http://169.254.0.21:3002
 
  ✓ Starting...
-Attention: Next.js now collects completely anonymous telemetry regarding usage.
-This information is used to shape Next.js' roadmap and prioritize features.
-You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
-https://nextjs.org/telemetry
-
- ✓ Ready in 1790ms
-   Reload env: .env
-   Reload env: .env
+ ✓ Ready in 2.2s
  ○ Compiling / ...
- ✓ Compiled / in 5.3s
- ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
- GET / 200 in 4660ms
- GET / 200 in 6459ms
- ⚠ Cross origin request detected from tasty-insects-love.lindy.site to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+ ✓ Compiled / in 7.2s (680 modules)
+ ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3002". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET / 200 in 8857ms
+ GET / 200 in 4798ms
+ ⚠ Cross origin request detected from young-buttons-go.lindy.site to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
  ○ Compiling /favicon.ico ...
- ✓ Compiled /favicon.ico in 607ms
- GET /favicon.ico?favicon.bf3c9292.ico 200 in 973ms
- GET / 200 in 293ms
- GET / 200 in 256ms
- GET /favicon.ico?favicon.bf3c9292.ico 200 in 269ms
- GET /favicon.ico?favicon.bf3c9292.ico 200 in 298ms
- ✓ Compiled in 299ms
- ✓ Compiled / in 48ms
- ⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
- GET / 200 in 410ms
- GET / 200 in 178ms
- GET / 200 in 573ms
- GET / 200 in 326ms
-
------
-[1m[31mFATAL[39m[0m: An unexpected Turbopack error occurred. A panic log has been written to /tmp/next-panic-c7e0db65c56c1d0436ff06c9a95c9a08.log.
-
-To help make Turbopack better, report this error by clicking here: https://github.com/vercel/next.js/discussions/new?category=turbopack-error-report&title=Turbopack%20Error%3A%20Next.js%20package%20not%20found&body=Turbopack%20version%3A%20%6057992a6e%60%0ANext.js%20version%3A%20%600.0.0%60%0A%0AError%20message%3A%0A%60%60%60%0ATurbopack%20Error%3A%20Next.js%20package%20not%20found%0A%60%60%60&labels=Turbopack,Turbopack%20Panic%20Backtrace
------
-
-Error [TurbopackInternalError]: Next.js package not found
-
-Debug info:
-- Execution of get_entrypoints_with_issues_operation failed
-- Execution of EntrypointsOperation::new failed
-- Execution of Project::entrypoints failed
-- Execution of AppProject::routes failed
-- Execution of directory_tree_to_entrypoints_internal failed
-- Execution of directory_tree_to_loader_tree failed
-- Execution of get_next_package failed
-- Next.js package not found
-    at <unknown> (TurbopackInternalError: Next.js package not found) {
-  location: undefined
-}
-[?25h
+ ✓ Compiled /favicon.ico in 915ms (416 modules)
+ GET /favicon.ico 200 in 1129ms
+ ✓ Compiled in 9.1s (671 modules)

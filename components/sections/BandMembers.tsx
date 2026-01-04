@@ -6,31 +6,31 @@ const members = [
     name: "Akarsh Sahay",
     role: "Lead Singer & Guitarist",
     description: "IIT Delhi Alumnus, 20+ years experience, performed at Rashtrapati Bhawan.",
-    image: "/images/members/akarsh.png"
+    image: "/images/members/akarsh.jpg"
   },
   {
     name: "Anuj Yadav",
     role: "Keyboardist / Synth",
     description: "1000+ live performances worldwide, opened for Sonu Nigam and B Praak.",
-    image: "/images/members/anuj.png"
+    image: "/images/members/anuj.jpg"
   },
   {
     name: "Sarthak Dutta",
     role: "Bass Guitarist",
     description: "10+ years experience, performed at Sadhguru's Save Soil Campaign.",
-    image: "/images/members/sarthak.png"
+    image: "/images/members/sarthak.jpg"
   },
   {
     name: "Nikhil Allan Lakra",
     role: "Lead Guitarist",
     description: "Professional guitarist and music educator known for expressive phrasing.",
-    image: "/images/members/nikhil.png"
+    image: "/images/members/nikhil.jpg"
   },
   {
     name: "Advin",
     role: "Drummer",
     description: "Trinity College London certified, performed at Hard Rock Cafe and The Piano Man.",
-    image: "/images/members/advin.png"
+    image: "/images/members/advin.jpg"
   }
 ]
 
