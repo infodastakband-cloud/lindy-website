@@ -4,6 +4,7 @@ import { resend } from "@/lib/resend"
 import { BookingNotification } from "@/components/emails/BookingNotification"
 import { NextResponse } from "next/server"
 import * as React from "react"
+import { renderToStaticMarkup } from "react-dom/server"
 
 export async function POST(request: Request) {
   try {
@@ -25,21 +26,24 @@ export async function POST(request: Request) {
 
     // 2. Send email notification
     try {
+      // Manually render the component to an HTML string to avoid environment-specific rendering issues
+      const emailHtml = renderToStaticMarkup(
+        <BookingNotification
+          name={name}
+          email={email}
+          phone={phone}
+          eventDate={eventDate}
+          eventType={eventType}
+          venue={venue}
+          message={message}
+        />
+      );
+
       const { data, error: resendError } = await resend.emails.send({
         from: 'Dastak Band <onboarding@resend.dev>',
         to: 'infodastakband@gmail.com',
         subject: `New Booking Inquiry: ${name} - ${eventDate}`,
-        react: (
-          <BookingNotification
-            name={name}
-            email={email}
-            phone={phone}
-            eventDate={eventDate}
-            eventType={eventType}
-            venue={venue}
-            message={message}
-          />
-        ),
+        html: emailHtml,
       });
 
       if (resendError) {
