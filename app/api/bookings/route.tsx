@@ -29,15 +29,17 @@ export async function POST(request: Request) {
         from: 'Dastak Band <onboarding@resend.dev>',
         to: 'infodastakband@gmail.com',
         subject: `New Booking Inquiry: ${name} - ${eventDate}`,
-        react: React.createElement(BookingNotification, {
-          name,
-          email,
-          phone,
-          eventDate,
-          eventType,
-          venue,
-          message,
-        }),
+        react: (
+          <BookingNotification
+            name={name}
+            email={email}
+            phone={phone}
+            eventDate={eventDate}
+            eventType={eventType}
+            venue={venue}
+            message={message}
+          />
+        ),
       });
 
       if (resendError) {
