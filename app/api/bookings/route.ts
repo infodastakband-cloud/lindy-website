@@ -3,6 +3,7 @@ import { prisma } from "@/lib/db"
 import { resend } from "@/lib/resend"
 import { BookingNotification } from "@/components/emails/BookingNotification"
 import { NextResponse } from "next/server"
+import * as React from "react"
 
 export async function POST(request: Request) {
   try {
@@ -25,10 +26,10 @@ export async function POST(request: Request) {
     // 2. Send email notification
     try {
       await resend.emails.send({
-        from: 'Dastak Band <onboarding@resend.dev>', // You can change this once you verify your domain
+        from: 'Dastak Band <onboarding@resend.dev>',
         to: 'infodastakband@gmail.com',
         subject: `New Booking Inquiry: ${name} - ${eventDate}`,
-        react: BookingNotification({
+        react: React.createElement(BookingNotification, {
           name,
           email,
           phone,
@@ -39,12 +40,11 @@ export async function POST(request: Request) {
         }),
       });
     } catch (emailError) {
-      // We log the email error but don't fail the whole request since the DB save succeeded
       console.error("Failed to send email notification:", emailError);
     }
 
     return NextResponse.json(booking, { status: 201 })
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Booking error details:", error)
     return NextResponse.json({ error: "Failed to create booking" }, { status: 500 })
   }
