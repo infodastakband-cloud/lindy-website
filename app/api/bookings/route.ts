@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
     // 2. Send email notification
     try {
-      await resend.emails.send({
+      const { data, error: resendError } = await resend.emails.send({
         from: 'Dastak Band <onboarding@resend.dev>',
         to: 'infodastakband@gmail.com',
         subject: `New Booking Inquiry: ${name} - ${eventDate}`,
@@ -39,8 +39,14 @@ export async function POST(request: Request) {
           message,
         }),
       });
+
+      if (resendError) {
+        console.error("Resend API Error:", resendError);
+      } else {
+        console.log("Email sent successfully:", data);
+      }
     } catch (emailError) {
-      console.error("Failed to send email notification:", emailError);
+      console.error("Failed to send email notification (exception):", emailError);
     }
 
     return NextResponse.json(booking, { status: 201 })
