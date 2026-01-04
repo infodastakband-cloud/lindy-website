@@ -33,9 +33,10 @@ export function BookingForm() {
         console.error("Server error:", errorData)
         throw new Error(errorData.error || "Failed to send booking request")
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Submission error:", error)
-      toast.error(error.message || "Something went wrong. Please try again.")
+      const message = error instanceof Error ? error.message : "Something went wrong. Please try again."
+      toast.error(message)
     } finally {
       setIsSubmitting(false)
     }
