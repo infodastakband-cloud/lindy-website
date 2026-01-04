@@ -19,3 +19,11 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  ✓ Compiled /favicon.ico in 915ms (416 modules)
  GET /favicon.ico 200 in 1129ms
  ✓ Compiled in 9.1s (671 modules)
+   Reload env: .env
+ ✓ Compiled in 671ms (657 modules)
+   Reload env: .env
+ ✓ Compiled in 609ms (657 modules)
+ ✓ Compiled in 281ms (272 modules)
+ ✓ Compiled in 1332ms (671 modules)
+ ✓ Compiled in 397ms (671 modules)
+ ✓ Compiled in 478ms (671 modules)

@@ -16,6 +16,7 @@ export function BookingForm() {
 
     const formData = new FormData(event.currentTarget)
     const data = Object.fromEntries(formData.entries())
+    console.log("Submitting form...", data)
 
     try {
       const response = await fetch("/api/bookings", {
@@ -28,10 +29,13 @@ export function BookingForm() {
         toast.success("Booking request sent successfully!")
         ;(event.target as HTMLFormElement).reset()
       } else {
-        throw new Error("Failed to send booking request")
+        const errorData = await response.json()
+        console.error("Server error:", errorData)
+        throw new Error(errorData.error || "Failed to send booking request")
       }
-    } catch (error) {
-      toast.error("Something went wrong. Please try again.")
+    } catch (error: any) {
+      console.error("Submission error:", error)
+      toast.error(error.message || "Something went wrong. Please try again.")
     } finally {
       setIsSubmitting(false)
     }
